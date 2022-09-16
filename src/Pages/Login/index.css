@@ -42,6 +42,11 @@ form button[text = "Log In"]{
     border-radius: 5px;
     font-weight: bold;
     font-size: 20px;
+    transition: 0.4s;
+}
+.loginBtn:hover{
+    background-color: rgb(134, 133, 133) !important;
+    color :rgb(255, 255, 255) !important
 }
 .forgotBtn{
     position: absolute;
@@ -49,6 +54,10 @@ form button[text = "Log In"]{
     right:0;
     width: 120px;
     background: none;
+    transition: 0.4s;
+}
+.forgotBtn:hover{
+    color :rgb(156, 156, 156) !important
 }
 .changeData{
     width:300px;
@@ -95,6 +104,11 @@ form button[text = "Log In"]{
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 91, 165);
+    transition: 0.4s;
+}
+.okButton:hover{
+    background-color: rgb(134, 133, 133) !important;
+    color :rgb(255, 255, 255) !important
 }
 .loginInfo{
    position: absolute;
