@@ -15,7 +15,7 @@ const ForgotPassword = ({ setForgotPasswordInfo }) => {
       }
     }
   };
-  console.log(loginData);
+  // console.log(loginData);
   return (
     <div className="changeData">
       <Input

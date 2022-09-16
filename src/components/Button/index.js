@@ -1,5 +1,8 @@
-const Button = ({text , disabled , onClick , color , backgroundColor , className , border}) => {
-     return (
+import { memo } from "react"
+
+export default memo(function Button ({text , disabled , onClick , color , backgroundColor , className , border}) {
+     console.log("btn called")
+    return (
         <button 
             onClick={onClick}
             disabled = {disabled}
@@ -14,5 +17,5 @@ const Button = ({text , disabled , onClick , color , backgroundColor , className
             {text}
         </button>
      )
- }
- export default Button
+ })
+ 
