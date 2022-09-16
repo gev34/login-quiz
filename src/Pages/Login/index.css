@@ -1,22 +1,25 @@
-body{
+body {
     background-color: rgb(0, 91, 165);
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.parent{
+
+.parent {
     width: 600px;
     height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-form{
+
+form {
     display: flex;
     flex-direction: column;
     position: relative;
 }
-form input{
+
+form input {
     background-color: rgb(0, 91, 165);
     width: 250px;
     height: 30px;
@@ -26,41 +29,49 @@ form input{
     padding-left: 20px;
     font-weight: bold;
 }
-form input:focus{
-    outline:0px solid rgb(0, 91, 165)
+
+form input:focus {
+    outline: 0px solid rgb(0, 91, 165)
 }
-form input::placeholder{
+
+form input::placeholder {
     color: white;
 }
-form button[text = "Log In"]{
+
+form button[text="Log In"] {
     height: 100px;
 }
-.loginBtn{
+
+.loginBtn {
     height: 40px;
     margin-top: 20px;
-    border:  2px solid white;
+    border: 2px solid white;
     border-radius: 5px;
     font-weight: bold;
     font-size: 20px;
     transition: 0.4s;
 }
-.loginBtn:hover{
+
+.loginBtn:hover {
     background-color: rgb(134, 133, 133) !important;
-    color :rgb(255, 255, 255) !important
+    color: rgb(255, 255, 255) !important
 }
-.forgotBtn{
+
+.forgotBtn {
     position: absolute;
-    top:105px;
-    right:0;
+    top: 105px;
+    right: 0;
     width: 120px;
     background: none;
     transition: 0.4s;
 }
-.forgotBtn:hover{
-    color :rgb(156, 156, 156) !important
+
+.forgotBtn:hover {
+    color: rgb(156, 156, 156) !important
 }
-.changeData{
-    width:300px;
+
+.changeData {
+    width: 300px;
     height: 300px;
     background-color: rgb(0, 91, 165);
     border: 2px solid white;
@@ -72,6 +83,7 @@ form button[text = "Log In"]{
     position: relative;
     margin-top: 200px;
 }
+
 .changeData input {
     background-color: rgb(0, 91, 165);
     width: 250px;
@@ -82,13 +94,16 @@ form button[text = "Log In"]{
     padding-left: 20px;
     font-weight: bold;
 }
-.changeData input:focus{
-    outline:0px solid rgb(0, 91, 165)
+
+.changeData input:focus {
+    outline: 0px solid rgb(0, 91, 165)
 }
-.changeData input::placeholder{
+
+.changeData input::placeholder {
     color: white;
 }
-.xForClose{
+
+.xForClose {
     position: absolute;
     right: 0px;
     top: 0px;
@@ -98,7 +113,8 @@ form button[text = "Log In"]{
     font-size: 20px;
     color: aliceblue;
 }
-.okButton{
+
+.okButton {
     width: 100px;
     height: 20px;
     border-radius: 5px;
@@ -106,19 +122,22 @@ form button[text = "Log In"]{
     color: rgb(0, 91, 165);
     transition: 0.4s;
 }
-.okButton:hover{
+
+.okButton:hover {
     background-color: rgb(134, 133, 133) !important;
-    color :rgb(255, 255, 255) !important
+    color: rgb(255, 255, 255) !important
 }
-.loginInfo{
-   position: absolute;
-   width: 200px;
-   height: 200px;
-   margin-top: 400px;
-}
-.loginInfo button{
+
+.loginInfo {
     position: absolute;
-    top:20px;
+    width: 200px;
+    height: 200px;
+    margin-top: 400px;
+}
+
+.loginInfo button {
+    position: absolute;
+    top: 20px;
     right: 0;
     border: none;
     background: none;

@@ -3,19 +3,19 @@ import Button from "../../components/Button";
 import loginData from "../../loginData";
 import { useState } from "react";
 
-const ForgotPassword = ({setForgotPasswordInfo}) => {
+const ForgotPassword = ({ setForgotPasswordInfo }) => {
   const [emailPassword, setEmailPassword] = useState({});
 
   // console.log(emailPassword)
   const changeUserData = () => {
     for (let i = 0; i < loginData.length; i++) {
       if (emailPassword.email === loginData[i].email) {
-       loginData[i].password = emailPassword.password
+        loginData[i].password = emailPassword.password;
         break;
       }
     }
   };
-  console.log(loginData)
+  console.log(loginData);
   return (
     <div className="changeData">
       <Input
@@ -41,20 +41,25 @@ const ForgotPassword = ({setForgotPasswordInfo}) => {
         }}
       />
       <Button
-        className= "okButton"
+        className="okButton"
         text="OK"
         disabled={false}
         onClick={(e) => {
           e.preventDefault();
           changeUserData();
-          setForgotPasswordInfo(false)
+          setForgotPasswordInfo(false);
         }}
         color="black"
         backgroundColor="white"
       />
-      <button className="xForClose" onClick={() => {
-        setForgotPasswordInfo(false)
-      }}>X</button>
+      <button
+        className="xForClose"
+        onClick={() => {
+          setForgotPasswordInfo(false);
+        }}
+      >
+        X
+      </button>
     </div>
   );
 };

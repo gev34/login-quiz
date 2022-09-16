@@ -5,17 +5,13 @@ import Input from "../../components/Input/Input";
 import TrueLogin from "../CheckLogin/TrueLogin";
 import FalseLogin from "../CheckLogin/FalseLogin";
 // import ForgotPassword from "../ForgotPassword/ForgotPassword";
-import './index.css'
+import "./index.css";
 
-
-
-
-const Login = ({ forgotPasswordInfo,setForgotPasswordInfo}) => {
+const Login = ({ forgotPasswordInfo, setForgotPasswordInfo }) => {
   const [emailPass, setEmailPass] = useState({});
   const [loginValidity, setLoginValidity] = useState();
   const [showLoginInfo, setShowLoginInfo] = useState(false);
   // const [forgotPasswordInfo, setForgotPasswordInfo] = useState(false);
-
 
   const isValidUser = () => {
     for (let i = 0; i < loginData.length; i++) {
@@ -60,7 +56,7 @@ const Login = ({ forgotPasswordInfo,setForgotPasswordInfo}) => {
           }}
         />
         <Button
-          className = "forgotBtn"
+          className="forgotBtn"
           text="Forgot Password"
           disabled={false}
           onClick={(e) => {
@@ -72,7 +68,7 @@ const Login = ({ forgotPasswordInfo,setForgotPasswordInfo}) => {
         />
 
         <Button
-          className = "loginBtn"
+          className="loginBtn"
           text="Log In"
           disabled={Object.keys(emailPass).length > 1 ? false : true}
           onClick={(e) => {
@@ -82,17 +78,17 @@ const Login = ({ forgotPasswordInfo,setForgotPasswordInfo}) => {
           color="rgb(0, 91, 165)"
           backgroundColor="white"
         />
-        
       </form>
       {/* {forgotPasswordInfo && <ForgotPassword setForgotPasswordInfo = {setForgotPasswordInfo}/> } */}
-      <div className="loginInfo">{loginValidity && showLoginInfo && (
+      <div className="loginInfo">
+        {loginValidity && showLoginInfo && (
           <TrueLogin setShowLoginInfo={setShowLoginInfo} />
         )}
         {!loginValidity && showLoginInfo && (
           <FalseLogin setShowLoginInfo={setShowLoginInfo} />
-        )}</div>
+        )}
+      </div>
     </div>
   );
-
 };
 export default Login;
