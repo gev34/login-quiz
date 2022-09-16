@@ -1,11 +1,13 @@
-const FalseLogin = () => {
+const FalseLogin = ({setShowLoginInfo}) => {
     return (
         <div style={{
             backgroundColor : "red",
-            width : "300px",
-            height : "300px"
+
         }}>
             <h2>ERROR</h2>
+            <button onClick={() => {
+                setShowLoginInfo(false)
+            }}>X</button>
         </div>
     )
 }
