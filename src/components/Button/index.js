@@ -1,6 +1,5 @@
-import { memo } from "react"
 
-export default memo(function Button ({text , disabled , onClick , color , backgroundColor , className , border}) {
+export default function Button ({text , disabled , onClick , color , backgroundColor , className , border}) {
      console.log("btn called")
     return (
         <button 
@@ -17,5 +16,5 @@ export default memo(function Button ({text , disabled , onClick , color , backgr
             {text}
         </button>
      )
- })
+ }
  

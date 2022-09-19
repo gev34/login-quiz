@@ -37,18 +37,18 @@ const Login = ({ forgotPasswordInfo, setForgotPasswordInfo }) => {
   //console.log(emailPass)
   // console.log(loginValidity)
   // console.log(showLoginInfo)
-  const onClick = useCallback((e) => {
-    e.preventDefault();
-    setForgotPasswordInfo(true);
-  }, []);
+  // const onClick = useCallback((e) => {
+  //   e.preventDefault();
+  //   setForgotPasswordInfo(true);
+  // }, []);
 
-  const onClick2 = useCallback((e) => {
-    e.preventDefault();
-    isValidUser();
-  }, []);
-  const onChange = useCallback((e) => {
-    setEmailPass({ ...emailPass, [e.target.name]: e.target.value });
-  }, []);
+  // const onClick2 = useCallback((e) => {
+  //   e.preventDefault();
+  //   isValidUser();
+  // }, []);
+  // const onChange = useCallback((e) => {
+  //   setEmailPass({ ...emailPass, [e.target.name]: e.target.value });
+  // }, []);
 
   return (
     <div className="parent">
@@ -57,19 +57,26 @@ const Login = ({ forgotPasswordInfo, setForgotPasswordInfo }) => {
           type="email"
           name="email"
           placeholder="Email"
-          onChange={onChange}
+          onChange={(e) => {
+            setEmailPass({ ...emailPass, [e.target.name]: e.target.value });
+          }}
         />
         <Input
           type="password"
           name="password"
           placeholder="Password"
-          onChange={onChange}
+          onChange={(e) => {
+            setEmailPass({ ...emailPass, [e.target.name]: e.target.value });
+          }}
         />
         <Button
           className="forgotBtn"
           text="Forgot Password"
           disabled={false}
-          onClick={onClick}
+          onClick={(e) => {
+            e.preventDefault();
+            setForgotPasswordInfo(true);
+          }}
           color=""
           backgroundColor="rgb(0, 91, 165)"
         />
@@ -78,7 +85,10 @@ const Login = ({ forgotPasswordInfo, setForgotPasswordInfo }) => {
           className="loginBtn"
           text="Log In"
           disabled={Object.keys(emailPass).length > 1 ? false : true}
-          onClick={onClick2}
+          onClick={(e) => {
+            e.preventDefault();
+            isValidUser();
+          }}
           color="rgb(0, 91, 165)"
           backgroundColor="white"
         />
